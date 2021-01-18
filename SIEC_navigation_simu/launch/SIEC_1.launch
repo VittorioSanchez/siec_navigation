@@ -6,7 +6,7 @@
   <node pkg="SIEC_control_simu" type="command.py" name="command"/>
 
 	#-----------------rosbridge---------------
-	<arg name="port" default="9090" />
+	<arg name="port" default="1609" />
   <arg name="address" default="0.0.0.0" />
   <arg name="ssl" default="false" />
   <arg name="certfile" default=""/>
