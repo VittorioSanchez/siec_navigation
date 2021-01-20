@@ -27,6 +27,18 @@ git clone https://github.com/your_missing_repo_here
 ```
 If you are familiar with ROS, you can also use rosdep. 
 
+## demo
 
+In this part, we will launch a navigation demo working with LGSVL simulator and the hmi. 
+
+This repo "repo_lgsvl_siec" will explain to you how to install the LGSVL simulator and the change you need to do to make it properly working with ROS (specially for the car to go in reverse).
+
+This repo https://github.com/siec2020/hmi.git will explain to you how to install the IHM (apache server and javascript and php code) on your machine. --note-- The version of the HMI in this repo is designed to work with the real car, to use the simulator you need to clone the following branch (hmi_simu_lgsvl) of this repo in your www folder instead of the master branch.
+
+```bash
+git clone -b hmi_simu_lgsvl https://github.com/siec2020/hmi.git
+```
+
+The next procedure assume that the LGSVL simulator and the HMI has already been installed in a proper way. 
 
 
