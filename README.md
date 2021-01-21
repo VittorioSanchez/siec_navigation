@@ -1,7 +1,7 @@
 # siec_navigation
 This repository contains nodes and packages wrote and used for navigation. 
 
-## install 
+## Install 
 First go to your catkin workspace source folder and clone the repository.
 ```bash
 cd ~/catkin_ws/src
@@ -47,9 +47,9 @@ Make sure to source your catkin_ws once you are done with the installation to be
 source ~/catkin_ws/devel/setup.bash
 ```
 
-## demo
+## Demo
 
-### prerequisites
+### Prerequisites
 
 In this part, we will launch a navigation demo working with LGSVL simulator and the hmi. 
 
@@ -63,9 +63,11 @@ git clone -b hmi_simu_lgsvl https://github.com/siec2020/hmi.git
 
 The next procedure assume that the LGSVL simulator and the HMI has already been installed in a proper way. 
 
-### launch demo 
+### Launch the demo 
 
 #### LGSVL side 
+
+Create a new simulation with the siec vehicle and its JSON config file. Choose the "campus_flat" map. Type your socket adress in the bridge windows (adress of your ROS machines in your local network followed by ':9090' (the default port for rosbridge-websocket). Then run the simulation.
 
 #### ROS side
 
@@ -76,7 +78,7 @@ roslaunch SIEC_navigation SIEC_demo_simu.launch
 ```
 If error occur at this point it might be due to some packages still missing, so be sure to install them using one of the methods already explained.
 
-### understand the interface
+### Understand the interface
 
 #### RVIZ 
 If every things works fine, you should see the RVIZ windows popup with a partial map (occupancy grid) of the INSA campus, the spawn point of the car in the simulator being the intersection GEI-GM-STPI. The red dots represents the simulated lidar from LGSVL. This topic (laser scan) can be used to create a 2d map of the campus using gmmaping for instance (this is how the partial map displayed on RVIZ had been created). The rectangle roughtly represent the footprint of the car. When waypoints are set using either RVIZ or the HMI, they will be displayed on RVIZ as red arrows once the "follow" button will be pressed on the HMI. Once the follow button is pressed, it will start the navigation. The car will start to move and the trajectory that the navigation node has computed and will try to follow will be displayed in green. 
@@ -87,7 +89,7 @@ At this point you should be able to connect on the HMI to control and observe th
 ![](demo_nav_hmi.gif)
 
 
-The expected behavior 
+ 
 
 
 
